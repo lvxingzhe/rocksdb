@@ -27,6 +27,13 @@ CPU supports it. To print a warning if your CPU does not support SSE4.2, build w
 to build a portable binary, add `PORTABLE=1` before your make commands, like this:
 `PORTABLE=1 make static_lib`.
 
+## developing and compile
+after installing dependenies,you can develop and refer to [Basic Operations](https://github.com/facebook/rocksdb/wiki/Basic-Operations).Then you will use shell command to complie you code on Linux:
+```
+g++ SOURCE.cpp  -o OUT.o  -g -std=c++11   -lrocksdb -lpthread -lzstd -lsnappy -lm -lz -lbz2 -llz4
+```
+Note that you should replace `Source.cpp` with you c++ source file.
+
 ## Dependencies
 
 * You can link RocksDB with following compression libraries:
